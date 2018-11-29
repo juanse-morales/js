@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script type="text/javascript">
+  // Ciclo For
+
+  /* Ciclo infinito
+  for(;;){
+  } */
+  /* Sintaxis
+  for(inicialización; condición; incremento){} */
+
+  for(i=0; i<10; i++){
+    console.log(i);
+  }
+
+  // Iterar un array
+  array = ["hola","mundo",2, 3.14,false, {name: "Sara", age: 14}];
+  for(i=0; i<array.length; i++){
+    console.log(array[i]);
+  }
+
+  for(i=0; i<10; i++){
+    if(i%2 !== 0) continue;
+    console.log(i);
+  }
+</script>
+</body>
+</html>
