@@ -6,7 +6,35 @@
 </head>
 <body>
 <script type="text/javascript">
+  cont = 0;
+  while(cont<10){
+    cont++;
+    if(cont%2 === 0) console.log(cont);
+  }
   
+  //Palabra reservada Continue: El ciclo salta a la siguiente iteración, no se ejecuta las instrucciones siguientes.
+  cont=0;
+  while(cont<10){
+    cont++;
+    if(cont%2!==0) continue;
+    console.log(cont);
+  }
+
+  // Palabra reservada Break: rompe el ciclo, termina el ciclo.
+  cont=0;
+  while(true){
+    cont++;
+    console.log(cont);
+    if(cont>=10) break;
+  }
+
+  // Do While
+  cont=0;
+  do{
+    cont++;
+    console.log(cont);
+    if(cont>=10) break;
+  }while(false);
 </script>
 </body>
 </html>
