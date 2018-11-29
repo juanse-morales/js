@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+  var cadena = "Hola mundooo";
+  console.log(cadena);
+
+  //Concatenación, operador: +
+  conc = "Cómo "+"estás ?";
+  console.log(conc);
+  
+  //Longitud
+  console.log(conc.length);
+  // Encontrar cadena dentro de otra, indexOf devuelve la posición de la primera letra.
+  result = cadena.indexOf("mn");
+  console.log(result);
+  //Una cadena es un arreglo de caracteres
+  console.log(cadena[5]);
+  console.log(cadena[cadena.length-1]);
+  console.log(cadena.charAt(2));
+
+  //Función Replace
+  console.log(cadena.replace("ola","aaaa"));
+  console.log(cadena);
+  cadena = cadena.replace("ooo","o");
+
+  //Devolver un trozo
+  console.log(cadena.slice(2,4));
+  // Conversión a mayúscula y a minúscula
+  console.log(cadena.toUpperCase());
+  console.log(cadena.toLowerCase());
+  
+
+</script>
+</body>
+</html>

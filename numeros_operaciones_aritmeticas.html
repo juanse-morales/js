@@ -10,6 +10,11 @@
 
   var punto_float = 12.5;
 
+  //suma de dos números de diferentes tipos
+  suma = edad+punto_float;
+
+  console.log(suma);
+
   function es_par(numero){
     if(numero % 2 == 0) return true;
     else return false;
@@ -17,6 +22,24 @@
 
   document.querySelector("body").innerHTML = edad+punto_float;
   console.log(es_par(2));
+
+  // Funciones matemáticas de JavaScript
+  // Función de potencia
+  console.log(Math.pow(2,3)); 
+  // Función de redondeo
+  // Estándar
+  console.log(Math.round(0.49));
+  console.log(Math.round(0.5));
+  // Rendondea siempre hacia arriba (Techo)
+  console.log(Math.ceil(2.49));
+  // Rendondea siempre hacia abajo (Piso)
+  console.log(Math.floor(3.49));
+  // Número PI
+  console.log(Math.PI);
+  // Número Random
+  console.log(Math.random());
+  // Raíz cuadrada
+  console.log(Math.sqrt(4));
 </script>
 </body>
 </html>
