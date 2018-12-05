@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prototype</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Prototype
+  function Tutor(nombre,apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  sara = new Tutor("Sara");
+  console.log(sara.__proto__);
+
+  sara.edad = 18;
+  console.log(sara.edad);
+
+  jose = new Tutor("José");
+  console.log(jose.edad);
+  console.log(jose.full_name);
+
+  sara.iniciar = function(){
+    return "Started";
+  }
+
+  console.log(sara.iniciar());
+  //console.log(jose.iniciar());
+
+  Tutor.prototype.iniciar2 = function(n) {
+    return "Coño "+ n;
+  };
+
+  console.log(jose.iniciar2("amén"));
+
+  Tutor.prototype.full_name = "Gloria";
+
+  console.log(jose.full_name);
+  console.log(sara.full_name);
+
+  
+</script>
+</body>
+</html>
