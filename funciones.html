@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funciones</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+  // Funciones
+  //function nombre_function(){}
+
+  function suma(a,b){
+    return a+b;
+  }
+
+  console.log(suma(2,4));
+  console.log(suma("Hola ","Mundo"));
+
+  var fun_suma = suma(); // Una función se puede almacenar en una var y también se puede pasar como parámetro.
+
+  function ejecutar(funcion){
+    return funcion();
+  }
+
+  function suma2(a,b) {
+    b = b || 0;
+    return a+b;
+  }
+
+  console.log(suma2(2));
+</script>
+</body>
+</html>

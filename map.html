@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Map</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Map ES5: Modificar los arreglos de forma avanzada e inteligente.
+  var numeros = [2,12,7,23];
+  var cuadrados = numeros.map(function(n){
+    return Math.pow(n,2);
+  });
+
+  console.log(numeros);
+  console.log(cuadrados);
+
+  var num = [2,12,7,23];
+  var cuad = num.map(function(n,i,a){
+    a[i] = n*2;
+    return Math.pow(n,2);
+  });
+
+  console.log(num);
+  console.log(cuad);
+</script>
+</body>
+</html>

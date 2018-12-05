@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+  // Arrays: contenedores o variables que nos permite agrupar un conjunto de datos.
+
+  var arreglo = [];
+  var array = new Array();
+
+  var arreglo2 = [20, "hola mundo",{},[]];
+  var arreglo3 = [20,10,5];
+
+  //console.log(arreglo3[0]);
+  //console.log(arreglo3.length);
+
+  arreglo3.push(7);
+  arreglo3.pop();
+
+  arreglo3.unshift(9);
+  arreglo3.shift();
+
+  //console.log(arreglo3);
+  
+  for (var i = 0; i < arreglo3.length; i++) {
+    console.log(arreglo3[i]);
+  }
+
+  for (var i = arreglo3.length-1; i >=0; i--) {
+    console.log(arreglo3[i]);
+  }
+  
+  var i=arreglo3.length-1;
+  for(;i>=0;i--){
+    console.log(arreglo3[i]);
+  }
+
+</script>
+</body>
+</html>
