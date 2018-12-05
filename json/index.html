@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON</title>
+</head>
+<body>
+<script type="text/javascript">
+  // JSON = Javascript Object Notation
+  var curso={
+    titulo: "Curso Javascript",
+    videos: 19,
+    tutor: "Uriel",
+    introduccion: function () {
+      return "Bienvenidos al: "+this.titulo+" que tiene "+this.videos+" videos";
+    }
+  }
+  console.log(curso.introduccion());
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Objetos con funciones</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Declarar objetos con funciones
+  function Tutor(nombre,apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    if(typeof apellido !== "undefined"){
+      this.full_name = this.nombre +" "+ this.apellido;
+    }
+
+    this.saludar = function() {
+      if(typeof this.full_name !== "undefined") {
+        console.log("Hola a todos soy "+this.full_name);
+      }else {
+        console.log("Hola a todos soy "+this.nombre);
+      }
+    }
+    
+  }
+
+  sara = new Tutor("Sara");
+  sara.saludar();
+  jose = new Tutor("José","Rodriguez");
+  jose.saludar();
+</script>
+</body>
+</html>
