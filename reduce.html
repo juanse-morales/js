@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Reduce</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Reduce ES5
+  var letras = ["H","o","l","a"];
+  console.log(letras.join(""));
+
+  /*.reduce(function_name(valor_anterior_retornado,valor_actual,index,arreglo){
+
+  })*/
+
+  var palabra = letras.reduce(function(pv,av,i,a){
+    return pv+av;
+  });
+  console.log(palabra);
+
+  var numeros = [23,14,1,3];
+  var suma = numeros.reduce(function(p,a){
+    return p+a;
+  },5);
+  console.log(suma);
+</script>
+</body>
+</html>

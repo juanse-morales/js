@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Closures</title>
+</head>
+<body>
+  <button id="btn">Clic</button>
+  <script type="text/javascript">
+    (function(){
+      document.getElementById('btn').addEventListener("click",function(){
+        console.log("Clickeado");
+      });
+
+      setTimeout(function(){
+        console.log(hola_mundo("Sara"));
+      },2000);
+
+      function hola_mundo(nombre) {
+        function construc() {
+          return "Hola "+nombre;
+        }
+        return construc();
+      }
+
+      setTimeout(function(){
+        console.log(hola_mundo2("Sara"));
+      },2000);
+
+      function hola_mundo2(nombre) {
+        function construc() {
+          nombre = "Andrea";
+          return "Hola "+nombre;
+        }
+        construc();
+        console.log(nombre);
+        return construc();
+      }
+    })();
+  </script>
+</body>
+</html>
