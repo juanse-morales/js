@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Getters & Setters</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Getters & Setters: Sirven para controlar el acceso y modificación de los atributos de un Objeto.
+  var curso={
+    titulo: "Curso Javascript",
+    videos: 19,
+    tutor: "Uriel",
+    getTutor: function() {
+      return this.tutor.toUpperCase();
+    },
+    setTutor: function (tutor) {
+      if(tutor === "" || (typeof tutor === "undefined")){ return; }
+      this.tutor = tutor;
+    }
+  }
+
+  curso.setTutor("Sara");
+  console.log(curso.getTutor());
+
+  var curso2={
+    titulo: "Curso Javascript",
+    videos: 19,
+    tutor_value: "Uriel",
+    get tutor() {
+      return this.tutor_value.toUpperCase();
+    },
+    set tutor(tutor_value) {
+      if(tutor_value === "" || (typeof tutor_value === "undefined")){ return; }
+      this.tutor_value = tutor_value;
+    }
+  }
+
+  curso2.tutor = "Jorge";
+  console.log(curso2.tutor);
+
+  var curso3={
+    titulo: "Curso Javascript",
+    videos: 19,
+    tutor: "Uriel"
+  }
+
+  curso3.tutor = "Jorge";
+  console.log(curso3.tutor);
+</script>
+</body>
+</html>
