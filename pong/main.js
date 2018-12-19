@@ -11,7 +11,7 @@
   self.Board.prototype = {
     get elements(){
       var elements = this.bars;
-      elements.push(this.ball);
+      //elements.push(this.ball);
       return elements;
     }
   }
@@ -52,6 +52,9 @@
   }
 
   self.BoardView.prototype = {
+    clean: function(){
+      this.ctx.clearRect(0,0,this.board.width,this.board.height);
+    },
     draw: function(){
       for (var i = this.board.elements.length - 1; i >= 0; i--) {
         var element = this.board.elements[i];
@@ -61,12 +64,10 @@
   }
 
   function draw(ctx,element){
-    if (element!==null && element.hasOwnProperty("kind")) {
-      switch(element.kind){
-        case "rectangle": {
-          ctx.fillRect(element.x,element.y,element.width,element.height);
-          break;
-        }
+    switch(element.kind){
+      case "rectangle": {
+        ctx.fillRect(element.x,element.y,element.width,element.height);
+        break;
       }
     }
   }
@@ -79,16 +80,23 @@ var canvas = document.getElementById('canvas');
 var board_view = new BoardView(canvas,board);
 
 document.addEventListener("keydown",function(ev){
+  ev.preventDefault();
   if(ev.keyCode==38){
     bar.up();
   }else if(ev.keyCode==40){
     bar.down();
+  }else if(ev.keyCode==87){
+    bar2.up();
+  }else if(ev.keyCode==83){
+    bar2.down();
   }
-  console.log(bar.toString());
 });
 
-window.addEventListener("load",main);
+//window.addEventListener("load",main);
+window.requestAnimationFrame(controller);
 
-function main() {
+function controller() {
+  board_view.clean();
   board_view.draw();
+  window.requestAnimationFrame(controller);
 }
