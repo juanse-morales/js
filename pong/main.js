@@ -2,7 +2,7 @@
   self.Board = function(width,height){
     this.width = width;
     this.height = height;
-    this.playing = false;
+    this.playing = true;
     this.game_over = false;
     this.bars = [];
     this.ball = null;
@@ -10,7 +10,7 @@
 
   self.Board.prototype = {
     get elements(){
-      var elements = this.bars;
+      var elements = this.bars.map(function(n){return n;});
       elements.push(this.ball);
       return elements;
     }
@@ -50,8 +50,16 @@
     this.board = board;
     this.speed_y = 0;
     this.speed_x = 3;
+    this.direccion = 1;
     this.board.ball = this;
     this.kind = "circle";
+  }
+
+  self.Ball.prototype = {
+    move: function(){
+      this.x += (this.speed_x * this.direccion);
+      this.y += (this.speed_y);
+    }
   }
 })();
 
@@ -69,30 +77,33 @@
       this.ctx.clearRect(0,0,this.board.width,this.board.height);
     },
     draw: function(){
-      for (var i = this.board.elements.length - 1; i >= 0; i--) {
-        var element = this.board.elements[i];
-        draw(this.ctx,element);
+      for (var i = this.board.elements.length -1; i >= 0; i--) {
+        draw(this.ctx,this.board.elements[i]);
       }
     },
     play: function(){
-      this.clean();
-      this.draw();
+      if(this.board.playing){
+        this.clean();
+        this.draw();
+        this.board.ball.move();
+      }
     }
   }
 
   function draw(ctx,element){
     switch(element.kind){
-      case "rectangle": {
+      case "rectangle":
         ctx.fillRect(element.x,element.y,element.width,element.height);
         break;
-      }
-      case "circle": {
+
+      case "circle":
         ctx.beginPath();
         ctx.arc(element.x,element.y,element.radius,0,7);
         ctx.fill();
         ctx.closePath();
         break;
-      }
+
+      default: break;
     }
   }
 })();
@@ -114,13 +125,17 @@ document.addEventListener("keydown",function(ev){
     bar.up();
   }else if(ev.keyCode==83){
     bar.down();
+  }else if(ev.keyCode==32){
+    board.playing = !board.playing;
   }
+  
 });
 
 //window.addEventListener("load",main);
 window.requestAnimationFrame(controller);
 
 function controller() {
+  //console.log("Controller");
   board_view.play();
   window.requestAnimationFrame(controller);
 }
