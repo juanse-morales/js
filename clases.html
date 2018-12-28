@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Clases ES6</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Clases ES6
+  'use strict';
+  class Human{
+    constructor(edad){
+      this.edad = edad;
+    }
+
+    birthdate(){
+      return "Época prehistórica";
+    }
+  }
+
+  class Tutor extends Human{
+    constructor(nombre,last_name,edad){
+      super(edad);
+      this.nombre = nombre;
+      this.last_name = last_name;
+    }
+
+    full_name(){
+      return this.nombre+" "+this.last_name;
+    }
+  }
+
+  var tutor = new Tutor("Sara","Rodriguez",12);
+  console.log(tutor.nombre);
+  console.log(tutor.full_name());
+  console.log(tutor.edad);
+  console.log(tutor.birthdate());
+</script>
+</body>
+</html>

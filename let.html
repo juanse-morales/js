@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Let ES6</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Let ES6: permite declarar variable así como Var, la diferencia se encuentra en el Scope.
+  // 'use strict';
+  init();
+  function init() {
+    var nombre = "Sara";
+    if(true){
+      let nombre = "Andrea";
+      console.log(nombre);
+    }
+    console.log(nombre);
+  }
+</script>
+</body>
+</html>
