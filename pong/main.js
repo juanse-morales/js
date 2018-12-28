@@ -169,13 +169,16 @@ document.addEventListener("keydown",function(ev){
     ev.preventDefault();
     bar2.up();
   }else if(ev.keyCode==40){
+    ev.preventDefault();
     bar2.down();
   }else if(ev.keyCode==87){
+    ev.preventDefault();
     bar.up();
   }else if(ev.keyCode==83){
     ev.preventDefault();
     bar.down();
   }else if(ev.keyCode==32){
+    ev.preventDefault();
     board.playing = !board.playing;
   }
 });

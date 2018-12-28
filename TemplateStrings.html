@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Template Strings</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Template Strings
+  var template = `Hola
+  puts :P
+  mundo`;
+
+  console.log(template);
+
+  // Interpolación
+  var nombre = "Codigo facilito";
+  var saludo = `Hola ${nombre} buen dia`;
+
+  console.log(saludo);
+
+  function name() {
+    return 2+3;
+  }
+
+  var saludo2 = `Hola ${name()} buen dia`;
+  var saludo3 = `Hola ${name} buen dia`;
+  
+  console.log(saludo2);
+  console.log(saludo3);
+
+  // Tagged templates
+
+  function tagged(cadenas,valores) {
+    console.log(cadenas);
+    console.log(valores);
+  }
+
+  tagged`Hola ${"Codigo"+"Facilito"} buen dia`;
+</script>
+</body>
+</html>
