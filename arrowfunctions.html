@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Arrow Functions
+  var numeros = [1,2,3,4,5];
+  var elevado_2 = numeros.map(function(n){return n*n;});
+  console.log(elevado_2);
+
+  var elevado_3 = numeros.map((n)=>{return n*n;});
+  console.log(elevado_3);
+
+  var elevado_4 = numeros.map(n=> n*n );
+  console.log(elevado_4);
+
+  var elevado_5 = numeros.map(()=> 2 );
+  console.log(elevado_5);
+
+  function Tutor() {
+    this.nombre = "Uriel";
+    var jo = this;
+    setTimeout(function(){
+      // this.nombre = "Codigo facilito"; 
+      jo.nombre = "Codigo facilito";
+    },500);
+  }
+
+  var tutor = new Tutor();
+  setTimeout(function(){console.log(tutor.nombre);},1000);
+
+  function Tutor2() {
+    this.nombre = "Uriel";
+    setTimeout(()=>{
+      console.log(this);
+      this.nombre = "Codigo facilito 2";
+    },500);
+  }
+
+  var tutor2 = new Tutor2();
+  setTimeout(function(){console.log(tutor2.nombre);},1000);
+</script>
+</body>
+</html>
