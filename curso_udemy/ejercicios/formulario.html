@@ -17,13 +17,13 @@
   <div class="box">
     <form action="" method="POST" id="formulario" onsubmit="return false;">
       <label for="nombre">Nombre: </label> <br>
-      <input type="text" name="nombre" id="nombre"> <br>
+      <input type="text" name="nombre" id="nombre" required=""> <br>
       <span id="error_nombre" class="error"></span><br>
       <label for="apellidos">Apellidos: </label> <br>
-      <input type="text" name="apellidos" id="apellidos"> <br> 
+      <input type="text" name="apellidos" id="apellidos" required=""> <br> 
       <span id="error_apellidos" class="error"></span><br>
       <label for="edad">Edad: </label> <br>
-      <input type="number" name="edad" id="edad"> <br> 
+      <input type="number" name="edad" id="edad" min="1" required=""> <br> 
       <span id="error_edad" class="error"></span><br>
       <input type="submit" value="Submit" id="submit">
     </form>

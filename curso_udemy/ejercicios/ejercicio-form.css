@@ -8,6 +8,7 @@
 .dashed{
   border: 3px dashed black;
   padding: 5px;
+  display: none;
 }
 
 .error{

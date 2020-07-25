@@ -1,61 +1,63 @@
 var formulario = document.querySelector('#formulario');
 var box_dashed = document.querySelector('.dashed');
-box_dashed.style.display = 'none';
+var input_nombre = document.querySelector("#nombre");
+var input_apellidos = document.querySelector("#apellidos");
+var input_edad = document.querySelector("#edad");
+var display;
 
 function display_err_name(){
-  var nombre = document.querySelector('#nombre').value;
-  console.log("Nombre: "+nombre);
-  console.log("Length: "+nombre.length);
+  var nombre = input_nombre.value;
   if(nombre.trim() == null || nombre.trim().length == 0){
     var en = document.querySelector("#error_nombre");
     en.innerHTML = "El nombre no es válido";
     en.style.display = "block";
+    display = false;
   }else{
     document.querySelector("#error_nombre").style.display = "none";
   }
 }
 
-formulario.addEventListener('submit',()=>{
-  var nombre = document.querySelector('#nombre').value;
-  var apellidos = document.querySelector('#apellidos').value;
-  var edad = document.querySelector('#edad').value;
-  var display = true;
-
-  if(nombre.trim() == null || nombre.trim().length == 0){
-    //alert("El nombre no es válido");
-    var en = document.querySelector("#error_nombre");
-    en.innerHTML = "El nombre no es válido";
-    //en.style.color = "red";
-    en.style.display = "block";
-    display = false;
-    //return false;
-  }else{
-    document.querySelector("#error_nombre").style.display = "none";
-  }
-
+function display_err_lastname(){
+  var apellidos = input_apellidos.value;
   if(apellidos.trim() == null || apellidos.trim().length == 0){
-    //alert("Los apellidos no son válidos");
     var ea = document.querySelector("#error_apellidos");
     ea.innerHTML = "Los apellidos no son válidos";
-    //ea.style.color = "red";
     ea.style.display = "block";
     display = false;
-    //return false;
   }else{
     document.querySelector("#error_apellidos").style.display = "none";
   }
 
+}
+
+function display_err_edad(){
+  var edad = input_edad.value;
   if(edad == null || edad <= 0 || isNaN(edad)){
-    //alert("La edad no es válida");
     var ee = document.querySelector("#error_edad");
     ee.innerHTML  = "La edad no es válida";
-    //ee.style.color = "red";
     ee.style.display = "block";
     display = false;
-    //return false;
   }else{
     document.querySelector("#error_edad").style.display = "none";
   }
+}
+
+
+// Listeners
+
+input_nombre.addEventListener('keyup',()=>display_err_name());
+input_apellidos.addEventListener('keyup',()=>display_err_lastname());
+input_edad.addEventListener('keyup',()=>display_err_edad());
+
+formulario.addEventListener('submit',()=>{
+  var nombre = input_nombre.value;
+  var apellidos = input_apellidos.value;
+  var edad = input_edad.value;
+  display = true;
+
+  display_err_name();
+  display_err_lastname();
+  display_err_edad();
 
   if(display){
     box_dashed.style.display = 'block';
@@ -79,9 +81,3 @@ formulario.addEventListener('submit',()=>{
   } */
 
 });
-
-var input_nombre = document.querySelector("#nombre");
-
-input_nombre.addEventListener('keyup',()=>display_err_name());
-//input_nombre.addEventListener('focus',()=>display_err_name());
-//input_nombre.addEventListener('blur',()=>display_err_name());

@@ -27,3 +27,7 @@ function abrirPestaña(url){
 function abrirVentana(url){
   window.open(url,"","width=600,height=600");
 }
+
+function abrir(){
+  window.alert('Hola');
+}
