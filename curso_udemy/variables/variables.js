@@ -33,7 +33,7 @@ if(true){
 
 console.log(texto);
 
-// Práctica
+// Práctica J
 
 var n = 30;
 console.log(n);
