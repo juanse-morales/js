@@ -30,7 +30,7 @@
           <li><a href="index.html">INICIO</a></li>
           <li><a href="reloj.html">RELOJ</a></li>
           <li><a href="about.html">SOBRE MÍ</a></li>
-          <li><a href="contact.html">CONTACTO</a></li>
+          <li><a href="#">CONTACTO</a></li>
         </ul>
       </nav>
     </header>
@@ -38,20 +38,25 @@
     <!-- Contenido -->
     <section id="content">
       <div id="box">
-        <div id="acordeon">
-          <h3>¿Quienes somos?</h3>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget iaculis mauris. Fusce elementum sapien est, sed feugiat augue euismod in.</p>
-          </div>
-          <h3>Nuestros servicios</h3>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget iaculis mauris. Fusce elementum sapien est, sed feugiat augue euismod in.</p>
-          </div>
-          <h3>Nuestros clientes</h3>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget iaculis mauris. Fusce elementum sapien est, sed feugiat augue euismod in.</p>
-          </div>
-        </div>
+        <h2>Contacto</h2>
+        <form action="" method="POST" id="form_contact">
+          <label>Nombres</label>
+          <input type="text" name="name" data-validation="alphanumeric">
+          <label>Apellidos</label>
+          <input type="text" name="surname" data-validation="alphanumeric">
+          <label>Email</label>
+          <input type="email" name="email" data-validation="email">
+          <label>Sexo</label>
+          <select name="sex">
+            <option value="men">Hombre</option>
+            <option value="woman">Mujer</option>
+          </select>
+          <label>Fecha de nacimiento</label>
+          <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy">
+          <label>Edad</label>
+          <input type="number" name="years" data-validation="number">
+          <input type="submit" value="Enviar">
+        </form>
       </div>
       <aside id="sidebar">
         <div id="about">
@@ -85,6 +90,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- jQuery UI -->
   <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <!-- Form Validator -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"  type="text/javascript"></script>
   <!-- Scripts -->
   <script type="text/javascript" src="js/main.js"></script>
 </body>

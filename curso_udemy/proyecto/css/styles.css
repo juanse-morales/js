@@ -141,7 +141,7 @@
   text-align: justify;
 }
 
-form input[type="text"], input[type="email"], input[type="password"]{
+form input[type="text"], form input[type="email"], form input[type="password"], form input[type="number"], form select{
   border: 1px solid #ccc;
   border-radius: 2px;
   margin-bottom: 10px;
@@ -246,4 +246,28 @@ footer{
   margin: 0 auto;
   padding: 30px;
   width: 25%;
+}
+
+
+/* Formulario de Contacto */
+
+#form_contact{
+  font-family: Helvetica, Arial;
+  margin-top: 15px;
+  width: 50%;
+}
+
+#form_contact label{
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.form-error{
+  background: red;
+  color: white;
+  /* float: right; */
+  font-size: 11px;
+  padding: 10px;
+  width: 100%;
 }
