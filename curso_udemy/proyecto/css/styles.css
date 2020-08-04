@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+
+/* Global */
+
+#global{
+  background: white;
+  box-shadow: 0px 0px 2px gray;
+  margin: 0px auto;
+  margin-top: 30px;
+  padding: 25px;
+  width: 65%;
+}
+
+
+/* Header */
+/* Logo */
+
+#logo{
+  color: white;
+  float: left;
+  font-family: "Verdana", "Arial";
+  font-size: 30px;
+  height: 80px;
+  letter-spacing: 4px;
+  line-height: 75px;
+  margin-bottom: 20px;
+  padding: .3em;
+  text-align: center;
+  width: 395px;
+}
+
+/* Nav */
+
+#menu{
+  background: #333;
+  font-family: Helvetica, Arial;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#menu ul{
+  line-height: 46px;
+  list-style: none;
+}
+
+#menu ul li{
+  display: inline-block;
+  height: 46px;
+  transition: all 300ms;
+}
+
+#menu a{
+  color: white;
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+}
+
+
+/* Contenido */
+
+#posts{
+  font-family: Helvetica, Arial;
+  float: left;
+  width: 60%;
+}
+
+.post{
+  padding: 7px;
+}
+
+.post h2{
+  color: #333;
+  font-size: 30px;
+}
+
+.post .date{
+  color: gray;
+  display: block;
+  margin-top: 5px;
+}
+
+.post p{
+  line-height: 22px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.button-more{
+  color: white;
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  width: 70px;
+}
+
+
+/* Sidebar */
+
+#sidebar{
+  font-family: Helvetica, Arial;
+  float: right;
+  width: 31%;
+}
+
+#sidebar h4{
+  background: url('../img/lines.png') repeat-x;
+  color: #333;
+  line-height: 10px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#sidebar h4 span{
+  background: white;
+  padding: 5px;
+}
+
+#sidebar img{
+  width: 100%;
+}
+
+#sidebar p{
+  font-size: 15px;
+  text-align: justify;
+}
+
+form input[type="text"], input[type="email"], input[type="password"]{
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+  width: 80%;
+}
+
+form input[type="submit"]{
+  background: #eee;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+/* Footer */
+
+footer{
+  background: rgba(51, 51, 51, .7);
+  color: white;
+  font-family: Helvetica, Arial;
+  height: 47px;
+  line-height: 47px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 65%;
+}
+
+
+/* Slider */
+
+.bx-wrapper, .bx-viewport{
+  height: 250px !important;
+}
+
+
+/* Theme */
+
+#selector-theme{
+  background: rgba(51,51,51,0.7);
+  height: 100px;
+  position: fixed;
+  top: 40%;
+  width: 50px;
+}
+
+.btn-theme{
+  border: 1px solid white;
+  display: block;
+  cursor: pointer;
+  height: 25px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 25px;
+}
+
+#to-green{
+  background: #235E3D;
+}
+
+#to-red{
+  background: #CA3413;
+}
+
+#to-blue{
+  background: #1F87C4;
+}
+
+
+/* Botón Subir */
+
+.subir{
+  color: white;
+  display: block;
+  float: right;
+  text-decoration: none;
+}
+
+
+/* Acordeon */
+
+#box{
+  float: left;
+  margin-top: 40px;
+  width: 60%;
+}
+
+
+/* Reloj*/
+
+#reloj{
+  border: 5px dashed #333;
+  color: #333;
+  font-size: 30px;
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 30px;
+  width: 25%;
+}
