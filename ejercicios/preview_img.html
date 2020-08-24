@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preview Image</title>
+</head>
+<body>
+  <div id="divInputLoad">
+    <h1>Test it uploading your own image</h1>
+    <div id="divFileUpload">
+        <input id="file-upload" type="file" accept="image/*" />
+    </div>
+    <div id="file-preview-zone">
+    </div>
+  </div>
+  <script type="text/javascript">
+    function readFile(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = (e) => {
+          var filePreview = document.createElement('img');
+          filePreview.id = 'file-preview';
+          //e.target.result contents the base64 data from the image uploaded
+          filePreview.src = e.target.result;
+          //console.log(e.target.result);
+          
+          var previewZone = document.getElementById('file-preview-zone');
+          previewZone.appendChild(filePreview);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+ 
+    var fileUpload = document.getElementById('file-upload');
+    fileUpload.onchange = (e) => {
+      console.log(e);
+      readFile(e.srcElement);
+    }
+  </script>
+</body>
+</html>
